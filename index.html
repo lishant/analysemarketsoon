@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Analyze Prediction Markets with AI | Prediction Market Tool</title>
+  <meta name="description" content="Analyse.market is an AI-powered prediction market tool that helps traders analyze yes/no markets across Polymarket, Kalshi, and other platforms." />
+  <link rel="canonical" href="https://analyse.market/" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Analyze Prediction Markets with AI | Prediction Market Tool" />
+  <meta property="og:description" content="AI-powered prediction market analysis for yes/no decisions across Polymarket, Kalshi, and more." />
+  <meta property="og:url" content="https://analyse.market/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Analyse.market" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Analyze Prediction Markets with AI | Prediction Market Tool" />
+  <meta name="twitter:description" content="AI-powered prediction market analysis for yes/no decisions across Polymarket, Kalshi, and more." />
+
+  <!-- Favicons (optional) -->
+  <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- JSON-LD: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Analyse.market",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "url": "https://analyse.market",
+    "description": "AI-powered prediction market tool designed to help traders analyze prediction markets and make informed yes/no decisions across Polymarket, Kalshi, and other platforms."
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Analyse.market?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Analyse.market is an AI-powered prediction market tool that helps traders analyze prediction markets and make informed yes/no decisions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which platforms are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Analyse.market supports prediction markets including Polymarket and Kalshi, with broader platform support expanding over time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does it work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Paste a market URL and get structured AI analysis covering probability, context, and key signals to support a yes/no decision."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this financial advice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Analyse.market provides analytical insights only and does not offer financial or investment advice."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="topbar">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="brand-name">Analyse.market</span>
+        </div>
+        <div class="top-actions">
+          <a class="link" href="#faq">FAQ</a>
+          <a class="link" href="#trust">Trust</a>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <p class="badge">AI Prediction Market Tool</p>
+
+          <h1>Analyze Prediction Markets with AI</h1>
+
+          <p class="lead">
+            Analyse.market helps traders <strong>analyze prediction markets</strong> and make better
+            <strong>yes/no decisions</strong> across platforms like <strong>Polymarket</strong> and <strong>Kalshi</strong>.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#get-started">Analyze a Market</a>
+            <a class="btn btn-ghost" href="#example">See Example Output</a>
+          </div>
+
+          <p class="micro">
+            Paste a market URL → get structured analysis → decide Yes or No.
+          </p>
+        </div>
+
+        <div class="panel" aria-label="Example preview">
+          <div class="panel-head">
+            <span class="panel-title">Preview Output</span>
+            <span class="pill">Sample</span>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <span class="k">Market</span>
+              <span class="v">Will X happen by DATE?</span>
+            </div>
+            <div class="row">
+              <span class="k">Implied probability</span>
+              <span class="v">42% (market price)</span>
+            </div>
+            <div class="row">
+              <span class="k">Key drivers</span>
+              <span class="v">3–5 factors with context</span>
+            </div>
+            <div class="row">
+              <span class="k">AI bias</span>
+              <span class="v">Leans Yes / Leans No (with reasoning)</span>
+            </div>
+            <div class="row">
+              <span class="k">Confidence</span>
+              <span class="v">Low / Medium / High</span>
+            </div>
+            <div class="divider"></div>
+            <p class="panel-note">
+              Full analysis (probability breakdown, sentiment, similar markets) can be gated behind sign-up.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="get-started" class="section">
+      <h2>Analyze Any Market URL</h2>
+      <p class="sub">
+        Enter a prediction market URL and get AI analysis designed for traders evaluating yes/no outcomes.
+      </p>
+
+      <form class="url-box" id="urlForm">
+        <label class="sr-only" for="marketUrl">Market URL</label>
+        <input
+          id="marketUrl"
+          name="marketUrl"
+          type="url"
+          placeholder="Paste a Polymarket or Kalshi URL…"
+          autocomplete="off"
+          inputmode="url"
+          required
+        />
+        <button class="btn btn-primary" type="submit">Analyze</button>
+      </form>
+
+      <p class="micro">
+        Tip: You can keep this as a placeholder now — later route it to your Next.js app and paywall flow.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>What the Analysis Covers</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Probability & Pricing</h3>
+          <p>Market-implied probability, price movement context, and what the odds suggest.</p>
+        </div>
+        <div class="card">
+          <h3>Key Drivers</h3>
+          <p>The main factors influencing the outcome, summarised for fast decision-making.</p>
+        </div>
+        <div class="card">
+          <h3>Signals & Sentiment</h3>
+          <p>Information signals and sentiment indicators that may affect market pricing.</p>
+        </div>
+        <div class="card">
+          <h3>Yes/No Decision Aid</h3>
+          <p>A clear directional bias with reasoning — the decision always remains yours.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="example" class="section">
+      <h2>Example Output Format</h2>
+      <p class="sub">
+        This is the structure you’ll receive after pasting a market URL.
+      </p>
+
+      <pre class="code" aria-label="Example analysis format"><code>{
+  "platform": "Polymarket / Kalshi",
+  "market_summary": "What the market is asking and how it resolves",
+  "implied_probability": "0.42",
+  "key_drivers": ["Driver 1", "Driver 2", "Driver 3"],
+  "ai_bias": "Leans No",
+  "confidence": "Medium",
+  "notes": "High-level reasoning and risk considerations"
+}</code></pre>
+    </section>
+
+    <section id="trust" class="section">
+      <h2>Transparency & Disclaimer</h2>
+      <p class="sub">
+        Analyse.market provides analytical insights only and does not offer financial or investment advice. Prediction markets involve risk.
+      </p>
+    </section>
+
+    <section id="faq" class="section">
+      <h2>Frequently Asked Questions</h2>
+
+      <details open>
+        <summary>What is Analyse.market?</summary>
+        <p>Analyse.market is an AI-powered prediction market tool that helps traders analyze prediction markets and make informed yes/no decisions.</p>
+      </details>
+
+      <details>
+        <summary>Which platforms are supported?</summary>
+        <p>Analyse.market supports prediction markets including Polymarket and Kalshi, with broader platform support expanding over time.</p>
+      </details>
+
+      <details>
+        <summary>How does it work?</summary>
+        <p>Paste a market URL and receive structured AI analysis covering probability, context, and key signals to support a yes/no decision.</p>
+      </details>
+
+      <details>
+        <summary>Is this financial advice?</summary>
+        <p>No. Analyse.market provides analytical insights only and does not offer financial or investment advice.</p>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-left">© <span id="year"></span> Analyse.market</div>
+      <div class="footer-right">
+        <a class="link" href="/privacy-policy.html">Privacy</a>
+        <a class="link" href="/terms.html">Terms</a>
+        <a class="link" href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
